@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Match Scoring Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rowdah ATP Tour</h1>
+        <h2>Match Scoring Tool</h2>
+        <div>
+            <input type="text" id="player1Name" placeholder="Player 1 Name (Serves First)">
+            <input type="text" id="player2Name" placeholder="Player 2 Name">
+            <div class="button-container">
+                <button id="startButton" onclick="startMatch()">Start Match</button>
+            </div>
+        </div>
+        <div id="scoreBoard" style="display: none;">
+            <div class="player">Player 1: <span id="displayPlayer1Name"></span></div>
+            <div class="score" id="player1Score">0</div>
+            <div class="player">Player 2: <span id="displayPlayer2Name"></span></div>
+            <div class="score" id="player2Score">0</div>
+            <h3>Set Score: <span id="setScore">0 - 0</span></h3>
+            <h3>Match Score: <span id="matchScore">0 - 0</span></h3>
+            <h4>Current Server: <span id="currentServer"></span></h4>
+            <h5>Serving From: <span id="serveSide"></span></h5>
+            <button id="scoreButton1" onclick="scorePoint(1)">Point - Player 1</button>
+            <button id="scoreButton2" onclick="scorePoint(2)">Point - Player 2</button>
+            <button id="faultButton" onclick="fault()">Fault</button>
+            <div class="button-newline"><button id="nextButton" style="display: none;" onclick="next()">Next</button></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
